@@ -1,4 +1,5 @@
 ﻿using System;
+using CustomListClass;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CustomListProject
@@ -9,7 +10,7 @@ namespace CustomListProject
         [TestMethod]
         public void AddSingleVariableIndex_CheckIndex0_OneIntPlacedAtIndex0()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             myList.Add(value);
             Assert.AreEqual(value, myList[0]);
@@ -17,7 +18,7 @@ namespace CustomListProject
         }
         public void AddTwoVariablesIndex_CheckIndex0And1_EachIntPlacedAtProperIndex()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             int value2 = 16;
             myList.Add(value);
@@ -27,7 +28,7 @@ namespace CustomListProject
         }
         public void AddThreeVariablesIndex_CheckIndex0And1And2_EachIntPlacedAtProperIndex()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             int value2 = 16;
             int value3 = 32;
@@ -39,7 +40,7 @@ namespace CustomListProject
         }
         public void AddThreeVariablesIndex_CheckIndex0And1And2And3_EachIntPlacedAtProperIndex()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             int value2 = 16;
             int value3 = 32;
@@ -52,7 +53,7 @@ namespace CustomListProject
         }
         public void AddThreeVariablesIndex_CheckIndex0And1And2And3And4_EachIntPlacedAtProperIndex()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             int value2 = 16;
             int value3 = 32;
@@ -67,7 +68,7 @@ namespace CustomListProject
         }
         public void AddFifteenVariablesIndex_CheckIndex0Value_IntPlacedAtProperIndex()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             int value2 = 16;
             int value3 = 32;
@@ -102,7 +103,7 @@ namespace CustomListProject
         }
         public void AddFifteenVariablesIndex_CheckCount_CountAtReturnsNumberOfListedInts()
         {
-            CustomList<int> myList = new CustomList<int>();
+            CustomListClass<int> myList = new CustomListClass<int>();
             int value = 8;
             int value2 = 16;
             int value3 = 32;
@@ -133,7 +134,7 @@ namespace CustomListProject
             myList.Add(value13);
             myList.Add(value14);
             myList.Add(value15);
-            Assert.AreEqual(15, CustomList.Count);
+            Assert.AreEqual(15, myList.Count);
         }
     }
 }
