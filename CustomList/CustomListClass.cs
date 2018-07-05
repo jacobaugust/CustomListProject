@@ -31,7 +31,7 @@ namespace CustomListClass
         public void Add (T value)
         {
             //assign what index number the value will be sent to
-            
+
             //manage count
 
             //check capacity (if at 60% double capacity)
