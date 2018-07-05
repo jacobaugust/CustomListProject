@@ -17,6 +17,7 @@ namespace CustomListClass
         public CustomListClass()
         {
             capacity = 5;
+            counter = 0;
             array = new T[capacity];
         }
 
@@ -28,13 +29,19 @@ namespace CustomListClass
         }
 
         //add method
-        public void Add (T value)
+        public void Add(T value)
         {
+            for (counter = 0; counter <= capacity; counter++)
+            {
+                array[counter] = value;
+            }
+
             //assign what index number the value will be sent to
 
             //manage count
 
             //check capacity (if at 60% double capacity)
+            capacity = capacity++;
 
         }
 
