@@ -16,6 +16,7 @@ namespace CustomListProject
             Assert.AreEqual(value, myList[0]);
 
         }
+        [TestMethod]
         public void AddTwoVariablesIndex_CheckIndex0And1_EachIntPlacedAtProperIndex()
         {
             CustomListClass<int> myList = new CustomListClass<int>();
@@ -26,6 +27,7 @@ namespace CustomListProject
             Assert.AreEqual(value2, myList[1]);
 
         }
+        [TestMethod]
         public void AddThreeVariablesIndex_CheckIndex0And1And2_EachIntPlacedAtProperIndex()
         {
             CustomListClass<int> myList = new CustomListClass<int>();
@@ -38,6 +40,7 @@ namespace CustomListProject
             Assert.AreEqual(value3, myList[2]);
 
         }
+        [TestMethod]
         public void AddThreeVariablesIndex_CheckIndex0And1And2And3_EachIntPlacedAtProperIndex()
         {
             CustomListClass<int> myList = new CustomListClass<int>();
@@ -51,6 +54,7 @@ namespace CustomListProject
             myList.Add(value4);
             Assert.AreEqual(value4, myList[3]);
         }
+        [TestMethod]
         public void AddThreeVariablesIndex_CheckIndex0And1And2And3And4_EachIntPlacedAtProperIndex()
         {
             CustomListClass<int> myList = new CustomListClass<int>();
@@ -66,6 +70,7 @@ namespace CustomListProject
             myList.Add(value5);
             Assert.AreEqual(value5, myList[4]);
         }
+        [TestMethod]
         public void AddFifteenVariablesIndex_CheckIndex0Value_IntPlacedAtProperIndex()
         {
             CustomListClass<int> myList = new CustomListClass<int>();
@@ -99,8 +104,9 @@ namespace CustomListProject
             myList.Add(value13);
             myList.Add(value14);
             myList.Add(value15);
-            Assert.AreEqual(value, myList[0]);
+            Assert.AreEqual(value8, myList[7]);
         }
+        [TestMethod]
         public void AddFifteenVariablesIndex_CheckCount_CountAtReturnsNumberOfListedInts()
         {
             CustomListClass<int> myList = new CustomListClass<int>();
@@ -134,7 +140,7 @@ namespace CustomListProject
             myList.Add(value13);
             myList.Add(value14);
             myList.Add(value15);
-           // Assert.AreEqual(15, myList.Count);
+            Assert.AreEqual(15, myList.count);
         }
     }
 }

@@ -11,13 +11,14 @@ namespace CustomListClass
 
         //member variables
         T[] array;
-        int counter;
+        T[] capacityArray;
+        public int count;
         int capacity;
 
         public CustomListClass()
         {
             capacity = 5;
-            counter = 0;
+            count = 0;
             array = new T[capacity];
         }
 
@@ -31,19 +32,25 @@ namespace CustomListClass
         //add method
         public void Add(T value)
         {
-            for (counter = 0; counter <= capacity; counter++)
+            if (count < capacity)
             {
-                array[counter] = value;
+                array[count] = value;
             }
-
-            //assign what index number the value will be sent to
-
-            //manage count
-
-            //check capacity (if at 60% double capacity)
-            capacity = capacity++;
-
+            else
+            {
+                capacity = capacity * 2;
+                capacityArray = new T[capacity];
+                for (int i = 0; i < count; i++)
+                {
+                    capacityArray[i] = array[i];
+                }
+                capacityArray[count] = value;
+                array = capacityArray;
+            }
+            
+            count++;
         }
+        //remove method
 
 
 
