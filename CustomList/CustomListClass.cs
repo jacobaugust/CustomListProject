@@ -80,6 +80,7 @@ namespace CustomListClass
                                
                             }
                             array = removeArray;
+                            count--;
                             return setTempArray;
                         }
 
@@ -89,7 +90,7 @@ namespace CustomListClass
                 
                 
             }
-            array = removeArray;
+            
             return setTempArray;
         }
     }
