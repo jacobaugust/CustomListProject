@@ -170,7 +170,64 @@ namespace CustomListProject
             myList.ToString();
             Assert.AreEqual("816326412888", myList.ToString());
         }
-        
+        [TestMethod]
+        public void OverloadNegationOperator_CheckCombinedLists_NewListRemovesElementsFromFirstList()
+        {
+            CustomListClass<int> myList = new CustomListClass<int>();
+            int value = 8;
+            int value2 = 16;
+            int value3 = 32;
+            int value4 = 64;
+            int value5 = 128;
+            myList.Add(value);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            myList.Add(value5);
+            CustomListClass<int> myList2 = new CustomListClass<int>();
+            int num = 7;
+            int num2 = 15;
+            int num3 = 32;
+            int num4 = 65;
+            int num5 = 127;
+            myList2.Add(num);
+            myList2.Add(num2);
+            myList2.Add(num3);
+            myList2.Add(num4);
+            myList2.Add(num5);
+            CustomListClass<int> removedList = new CustomListClass<int>();
+            removedList = myList - myList2;
+            Assert.AreEqual(value5, removedList[3]);
+        }
+        //[TestMethod]
+        //public void OverloadNegationOperator_CheckCombinedLists_NewListRemovesElementsFromSecondList()
+        //{
+        //    CustomListClass<int> myList = new CustomListClass<int>();
+        //    int value = 7;
+        //    int value2 = 15;
+        //    int value3 = 32;
+        //    int value4 = 63;
+        //    int value5 = 127;
+        //    myList.Add(value);
+        //    myList.Add(value2);
+        //    myList.Add(value3);
+        //    myList.Add(value4);
+        //    myList.Add(value5);
+        //    CustomListClass<int> myList2 = new CustomListClass<int>();
+        //    int num = 8;
+        //    int num2 = 16;
+        //    int num3 = 32;
+        //    int num4 = 64;
+        //    int num5 = 128;
+        //    myList.Add(num);
+        //    myList.Add(num2);
+        //    myList.Add(num3);
+        //    myList.Add(num4);
+        //    myList.Add(num5);
+        //    CustomListClass<int> combinedList = new CustomListClass<int>();
+        //    combinedList = myList - myList2;
+        //    Assert.AreEqual(num5, myList[8]);
+        //}
 
 
 

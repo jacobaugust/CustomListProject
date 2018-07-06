@@ -162,14 +162,14 @@ namespace CustomListProject
             int num3 = 32;
             int num4 = 64;
             int num5 = 128;
-            myList.Add(num);
-            myList.Add(num2);
-            myList.Add(num3);
-            myList.Add(num4);
-            myList.Add(num5);
+            myList2.Add(num);
+            myList2.Add(num2);
+            myList2.Add(num3);
+            myList2.Add(num4);
+            myList2.Add(num5);
             CustomListClass<int> combinedList = new CustomListClass<int>();
             combinedList = myList + myList2;
-            Assert.AreEqual(value5, myList[4]);
+            Assert.AreEqual(value5, combinedList[4]);
         }
         [TestMethod]
         public void OverloadAddOperator_CheckCombinedLists_NewListHasElementsFromSecondList()
@@ -191,14 +191,14 @@ namespace CustomListProject
             int num3 = 32;
             int num4 = 64;
             int num5 = 128;
-            myList.Add(num);
-            myList.Add(num2);
-            myList.Add(num3);
-            myList.Add(num4);
-            myList.Add(num5);
+            myList2.Add(num);
+            myList2.Add(num2);
+            myList2.Add(num3);
+            myList2.Add(num4);
+            myList2.Add(num5);
             CustomListClass<int> combinedList = new CustomListClass<int>();
             combinedList = myList + myList2;
-            Assert.AreEqual(value5, myList[9]);
+            Assert.AreEqual(num5, combinedList[9]);
         }
     }
 }
