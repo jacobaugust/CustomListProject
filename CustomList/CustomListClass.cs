@@ -73,7 +73,7 @@ namespace CustomListClass
                             for (int l = 0; l < count; l++)
                             {
                                 removeArray[k] = array[k + 1];
-                                if (k < count - 1)
+                                if (k < count - 2)
                                 {
                                     k++;
                                 }

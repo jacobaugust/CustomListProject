@@ -16,7 +16,8 @@ namespace CustomListClass
             customListClass1.Add(2);
             customListClass1.Add(3);
             customListClass1.Add(4);
-            customListClass1.Remove(2);
+            customListClass1.Add(5);
+            customListClass1.Remove(3);
             Console.ReadKey();
         }
     }
