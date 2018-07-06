@@ -12,6 +12,12 @@ namespace CustomListClass
         static void Main(string[] args)
         {
             CustomListClass<int> customListClass1 = new CustomListClass<int>();
+            customListClass1.Add(1);
+            customListClass1.Add(2);
+            customListClass1.Add(3);
+            customListClass1.Add(4);
+            customListClass1.Remove(2);
+            Console.ReadKey();
         }
     }
 }
