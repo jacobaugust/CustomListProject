@@ -123,10 +123,10 @@ namespace CustomListClass
         public static CustomListClass<T> operator -(CustomListClass<T> list1, CustomListClass<T> list2)
         {
             CustomListClass<T> removed = new CustomListClass<T>();
-            //for (int n = 0; n < list1.count; n++)
-            //{
-            //    removed.Remove(list1[n]);
-            //}
+            for (int n = 0; n < list1.count; n++)
+            {
+                removed.Add(list1[n]);
+            }
             for (int o = 0; o < list2.count; o++)
             {
                 removed.Remove(list2[o]);
