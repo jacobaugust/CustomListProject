@@ -77,7 +77,7 @@ namespace CustomListClass
                                 {
                                     k++;
                                 }
-                               
+
                             }
                             array = removeArray;
                             count--;
@@ -85,13 +85,40 @@ namespace CustomListClass
                         }
 
                     }
-                    
+
                 }
-                
-                
+
+
             }
-            
+
             return setTempArray;
+        }
+        public override string ToString()
+        {
+            string stringArray;
+            stringArray = "";
+            for (int m = 0; m < count; m++)
+            {
+                stringArray += array[m].ToString();
+
+            }
+            return stringArray;
+        }
+
+        
+        public static CustomListClass<T> operator +(CustomListClass<T> list1, CustomListClass<T> list2)
+        {
+            CustomListClass<T> combined = new CustomListClass<T>();
+            for (int n = 0; n < list1.count; n++)
+            {
+                combined.Add(list1[n]);
+            }
+            for (int o = 0; o < list2.count; o++)
+            {
+                combined.Add(list2[o]);
+            }
+            return combined;
+
         }
     }
 }

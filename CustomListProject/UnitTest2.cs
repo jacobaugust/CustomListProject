@@ -134,8 +134,43 @@ namespace CustomListProject
             myList.Remove(100);
             Assert.AreEqual(value5, myList[4]);
         }
-
-
+        [TestMethod]
+        public void ChangeValuesToString_CheckStringDesignation_LongListAlteredToString()
+        {
+            CustomListClass<int> myList = new CustomListClass<int>();
+            int value = 8;
+            int value2 = 16;
+            int value3 = 32;
+            int value4 = 64;
+            int value5 = 128;
+            myList.Add(value);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            myList.Add(value5);
+            myList.ToString();
+            Assert.AreEqual("8163264128", myList.ToString());
+        }
+        [TestMethod]
+        public void ChangeValuesToString_CheckStringDesignation_LongerListAlteredToString()
+        {
+            CustomListClass<int> myList = new CustomListClass<int>();
+            int value = 8;
+            int value2 = 16;
+            int value3 = 32;
+            int value4 = 64;
+            int value5 = 128;
+            int value6 = 88;
+            myList.Add(value);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            myList.Add(value5);
+            myList.Add(value6);
+            myList.ToString();
+            Assert.AreEqual("816326412888", myList.ToString());
+        }
+        
 
 
 
