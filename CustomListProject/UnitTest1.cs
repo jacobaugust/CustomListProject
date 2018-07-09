@@ -240,6 +240,7 @@ namespace CustomListProject
             myList2.Add(num2);
             myList2.Add(num3);
             CustomListClass<int> zippedList = new CustomListClass<int>();
+            zippedList = myList + myList2;
             myList.ZipList(myList, myList2, zippedList);
             Assert.AreEqual(value3, zippedList[4]);
         }
@@ -261,6 +262,7 @@ namespace CustomListProject
             myList2.Add(num2);
             myList2.Add(num3);
             CustomListClass<int> zippedList = new CustomListClass<int>();
+            zippedList = myList + myList2;
             myList.ZipList(myList, myList2, zippedList);
             Assert.AreEqual(num3, zippedList[5]);
         }
