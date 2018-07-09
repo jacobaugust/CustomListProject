@@ -132,7 +132,28 @@ namespace CustomListClass
                 removed.Remove(list2[o]);
             }
             return removed;
-
+        }
+        public void ZipList(CustomListClass<int> myList1, CustomListClass<int> myList2, CustomListClass<int> zippedList)
+        {
+            int takeAway = 1;
+            for (int p = 0; p < zippedList.count; p++)
+            {
+                if (p < 1)
+                {
+                    zippedList[0] = myList1[0];
+                }
+                else if (p % 2 != 0)
+                {
+                    zippedList[p] = myList2[p-takeAway];
+                    
+                }
+                else if (p % 2 == 0)
+                {
+                    zippedList[p] = myList1[p-takeAway];
+                    takeAway++;
+                }
+                
+            }
         }
     }
 }

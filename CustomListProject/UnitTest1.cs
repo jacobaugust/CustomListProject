@@ -200,5 +200,69 @@ namespace CustomListProject
             combinedList = myList + myList2;
             Assert.AreEqual(num5, combinedList[9]);
         }
+        [TestMethod]
+        public void ZippedLists_CheckZippedLists_NewListHasSecondListElementsInProperOrder()
+        {
+            CustomListClass<int> myList = new CustomListClass<int>();
+            int value = 1;
+            int value2 = 3;
+            int value3 = 5;
+            myList.Add(value);
+            myList.Add(value2);
+            myList.Add(value3);
+            CustomListClass<int> myList2 = new CustomListClass<int>();
+            int num = 2;
+            int num2 = 4;
+            int num3 = 6;
+            myList2.Add(num);
+            myList2.Add(num2);
+            myList2.Add(num3);
+            CustomListClass<int> zippedList = new CustomListClass<int>();
+            zippedList = myList + myList2;
+            myList.ZipList(myList, myList2, zippedList);
+            Assert.AreEqual(num, zippedList[1]);
+        }
+        [TestMethod]
+        public void ZippedLists_CheckZippedLists_NewListHasFirstListElementsInProperOrder()
+        {
+            CustomListClass<int> myList = new CustomListClass<int>();
+            int value = 1;
+            int value2 = 3;
+            int value3 = 5;
+            myList.Add(value);
+            myList.Add(value2);
+            myList.Add(value3);
+            CustomListClass<int> myList2 = new CustomListClass<int>();
+            int num = 2;
+            int num2 = 4;
+            int num3 = 6;
+            myList2.Add(num);
+            myList2.Add(num2);
+            myList2.Add(num3);
+            CustomListClass<int> zippedList = new CustomListClass<int>();
+            myList.ZipList(myList, myList2, zippedList);
+            Assert.AreEqual(value3, zippedList[4]);
+        }
+        [TestMethod]
+        public void ZippedLists_CheckZippedLists_NewListHasLastElementInProperOrder()
+        {
+            CustomListClass<int> myList = new CustomListClass<int>();
+            int value = 1;
+            int value2 = 3;
+            int value3 = 5;
+            myList.Add(value);
+            myList.Add(value2);
+            myList.Add(value3);
+            CustomListClass<int> myList2 = new CustomListClass<int>();
+            int num = 2;
+            int num2 = 4;
+            int num3 = 6;
+            myList2.Add(num);
+            myList2.Add(num2);
+            myList2.Add(num3);
+            CustomListClass<int> zippedList = new CustomListClass<int>();
+            myList.ZipList(myList, myList2, zippedList);
+            Assert.AreEqual(num3, zippedList[5]);
+        }
     }
 }
