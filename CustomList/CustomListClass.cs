@@ -1,18 +1,18 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomListClass
+namespace CustomListClass 
 {
-    public class CustomListClass<T>
+    public class CustomListClass<T> : IEnumerable<T>
     {
 
         //member variables
         T[] array;
-        bool remove;
-        public int count;
+        private int count;
         int capacity;
 
         public CustomListClass()
@@ -21,7 +21,24 @@ namespace CustomListClass
             count = 0;
             array = new T[capacity];
         }
+        
+        public IEnumerator<T> GetEnumerator()
+        {
+            foreach (T item in array)
+            {
+                if (item == null)
+                {
+                    break;
+                }
+                yield return item;
+            }
 
+        }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+     
         //indexer
         public T this[int i]
         {
@@ -50,6 +67,11 @@ namespace CustomListClass
             }
 
             count++;
+        }
+        //count method
+        public int Count
+        {
+            get { return count; }
         }
         //remove method
         public bool Remove(T value)

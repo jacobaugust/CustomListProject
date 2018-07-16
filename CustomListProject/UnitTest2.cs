@@ -78,7 +78,6 @@ namespace CustomListProject
             myList.Remove(value15);
             Assert.AreEqual(14, myList.count);
         }
-
             [TestMethod]
             public void RemoveSpecificSingleVariableUnsuccessfully_CheckCountOfArray_ArrayCountNotChangedByFailedRemoval()
         {
@@ -199,39 +198,5 @@ namespace CustomListProject
             removedList = myList - myList2;
             Assert.AreEqual(value5, removedList[3]);
         }
-        //[TestMethod]
-        //public void OverloadNegationOperator_CheckCombinedLists_NewListRemovesElementsFromSecondList()
-        //{
-        //    CustomListClass<int> myList = new CustomListClass<int>();
-        //    int value = 7;
-        //    int value2 = 15;
-        //    int value3 = 32;
-        //    int value4 = 63;
-        //    int value5 = 127;
-        //    myList.Add(value);
-        //    myList.Add(value2);
-        //    myList.Add(value3);
-        //    myList.Add(value4);
-        //    myList.Add(value5);
-        //    CustomListClass<int> myList2 = new CustomListClass<int>();
-        //    int num = 8;
-        //    int num2 = 16;
-        //    int num3 = 32;
-        //    int num4 = 64;
-        //    int num5 = 128;
-        //    myList.Add(num);
-        //    myList.Add(num2);
-        //    myList.Add(num3);
-        //    myList.Add(num4);
-        //    myList.Add(num5);
-        //    CustomListClass<int> combinedList = new CustomListClass<int>();
-        //    combinedList = myList - myList2;
-        //    Assert.AreEqual(num5, myList[8]);
-        //}
-
-
-
-
-
     }
 }
